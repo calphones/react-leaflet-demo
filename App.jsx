@@ -3,14 +3,14 @@ import { render } from 'react-dom';
 import { Map, TileLayer } from 'react-leaflet';
 import Control from 'react-leaflet-control';
 
-const stamenTonerTiles = 'http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png';
-const stamenTonerAttr = 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
-const mapCenter = [39.9528, -75.1638];
+const stamenTonerTiles = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+const stamenTonerAttr = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+const mapCenter = [41.87, -87.62];
 const zoomLevel = 12;
 
 export default class App extends Component {
     constructor(props) {
-        super(props);
+        super(props);   
         this.state = { currentZoomLevel: zoomLevel };
         this.handleUpPanClick = this.handleUpPanClick.bind(this);
         this.handleRightPanClick = this.handleRightPanClick.bind(this);
